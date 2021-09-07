@@ -5,22 +5,103 @@
 
     <body>
         <h1><center>Hailey's Blog Posts - Week 2</center></h1>
-        <h2>Septemeber 7th, 2021</h2>
+        <h3>Septemeber 7th, 2021</h3>
 
         <p>After reading Chapter 3 and 4 this weekend, I was still a little confused on why the box model was so prominent in CSS coding and style. I decided to use this as the focal topic of my blog post this week to give myself a better understanding of how to use it. The 'Box Model' refers to the idea that everything is CSS as a box around it, allowing you to create layouts and ensure alignment between elements. There are two types boxes: block boxes and inline boxes. Before reading this article, I was unsure what the differences were but I have learned that it impacts the way the box interacts with other boxes on the page as well as how the page layout is constructed. This is obviously an important component when it comes to creating an aesthically pleasing website since we can not have elements overlapping or with tons of extra space surronding them. One major difference is that block boxes will break to a new line and inline boxes will not. Both of these features can be useful for different circumstances. Another point that helped me understand this concept further was that each HTML tag has a default box type. Some examples are &lth1&gt and &ltp&gt which are block box type and &lta&gt, &ltspan&gt, and &ltem&gt which are inline type. This idea that every element has a default type can help in understanding why each interact with other tags/elements like they do. Although each has a default type, there is a command in CSS to change the default type so that the element reacts in a different way. 
 
         <br>
 
-        <pre>
-            element1 {
-                display: inline;
-                color: red;
-                font-size: 10px;
-            }
-        </pre>
+<pre>
+element1 {
+    display: inline;
+    color: red;
+    font-size: 10px;
+}
+</pre>
+        The 'display' field can be used to change a default box type to whatever one fits your needs. There is actaully a third common option for a display type which is inline-block. Inline-block allows the element to have the qualities of an inline element but also allows height and width properties to be applied to it. I know this can be confusing to think about but looking at the following three examples showing the difference display proporty options on the same text might make it clearer.
+        <br>    
+<pre>
+&lthtml&gt
+    &lthead&gt
+        &ltstyle&gt
 
+        p {
+            display: inline;
+        }
+
+        &lt/style&gt
+
+    &lt/head&gt
+    
+    &ltbody&gt
+
+        &ltp&gt
+	        Here is an example of the display properties on text to see the differences.
+        &lt/p&gt
+
+    &lt/body&gt
+&lt/html&gt
+        
+</pre>
+
+            <img src = "inlineex.png" alt = "Inline Text Example" width = 200 height = 200>
+            <br>
+<pre>
+&lthtml&gt
+    &lthead&gt
+        &ltstyle&gt
+
+        p {
+            display: block;
+        }
+
+        &lt/style&gt
+
+    &lt/head&gt
+    
+    &ltbody&gt
+
+        &ltp&gt
+	        Here is an example of the display properties on text to see the differences.
+        &lt/p&gt
+
+    &lt/body&gt
+&lt/html&gt
+        
+</pre>  
+
+            <img src = "blockex.png" alt = "Block Text Example" width = 200 height = 200>
+            <br>  
+<pre>
+    &lthtml&gt
+        &lthead&gt
+            &ltstyle&gt
+    
+            p {
+                display: block;
+            }
+    
+            &lt/style&gt
+    
+        &lt/head&gt
+        
+        &ltbody&gt
+    
+            &ltp&gt
+                Here is an example of the display properties on text to see the differences.
+            &lt/p&gt
+    
+        &lt/body&gt
+    &lt/html&gt
+            
+    </pre>  
+    
+                <img src = "inlineblockex.png" alt = "Inline-Block Text Example" width = 200 height = 200>
+                <br>        
         </p>
 
         <a href = "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The Box Model Link</a>
+        <br>
+        <a href = "https://www.w3schools.com/cssref/pr_class_display.asp">CSS Display Property</a>
     </body>
 </html>
