@@ -74,7 +74,7 @@ example.relative {
             </p>
 
             <h4>Position: Absolute</h4>
-            <p> Absolute positioning suggests that an element is positioned relative to the nearest positioned ancestor. These elements are not a part of the normal flow of the page and can overlap with elements that are apart of the normal page flow. 
+            <p> Absolute positioning suggests that an element is positioned relative to the nearest positioned ancestor. These elements are not a part of the normal flow of the page and can overlap with elements that are apart of the normal page flow. If there are no positioned ancestors for the element to latch onto, the element might move along page with the normal flow.
 <pre>
 example.absolute {
     position: absolute;
@@ -92,7 +92,7 @@ example.absolute {
             </p>
 
             <h4>Position: Sticky</h4>
-            <p> Sticky positioning means that an element is positioned in relation to the user's scrolling position. This typically means that it toggles between fixed and relative based on the scroll positioning. The element basically sticks in place while you move through the page.
+            <p> Sticky positioning means that an element is positioned in relation to the user's scrolling position. This typically means that it toggles between fixed and relative based on the scroll positioning. The element basically sticks in place while you move through the page. Sticky and fixed have the relatively same concept as they maintain the positioning of the element while other elements move with the scrolling of the page.
 <pre>
 example.sticky {
     position: sticky;
