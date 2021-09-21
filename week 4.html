@@ -9,16 +9,32 @@
         <h4><center>Septemeber 24th, 2021</center></h4>
 
         <p>
-            A tricky concept to undestand in CSS is the idea of positioning an element in relation to other elements on the page. This property, 'position' is used to define the type of positioning used for a particular element. There are 5 options for this property:
+            A tricky concept to undestand in CSS is the idea of positioning an element in relation to other elements on the page. This property 'position' is used to define the type of positioning used for a particular element. There are 5 options for this property shown below. In addition to setting the 'position' property, you can also set 'bottom', 'top', 'left', and 'right' which will only work in relation to the 'position' attribute. In this section, I will explain what each property option does as well as provide examples to make it easier to undestand as I know I am still trying to grasp this concept too.
 <pre>
 .example {
     position: static | fixed | relative | absolute | sticky;
 }
 </pre>
-            In this section, I will explain what each property option does as well as provide examples to make it easier to undestand as I know I am still trying to grasp this concept too.
             <br>
 
             <h4>Position: Static</h4>
+            <p>An element is positioned to static by default so there is no need to specify if unless you want to add 'bottom', 'top', 'left' and 'right' attributes to the element. An element with a static position will flow the normal flow of the page. 
+<pre>
+example.static {
+    position: static;
+    border: 3px solid rgb(151, 179, 214);
+}
+
+&ltbody&gt
+
+    &ltdiv class = "static"&gt
+    This div element has position: static;
+    &lt/div&gt
+&lt/body&gt
+</pre>
+
+            <img src = 
+            </p>
 
             <h4>Position: Fixed</h4>
 
