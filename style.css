@@ -13,6 +13,7 @@ body {
 
 #image {
     border: solid rgb(151, 179, 214);
+    padding: 3px;
 }
 
 #links {
