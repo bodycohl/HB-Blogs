@@ -19,3 +19,17 @@ body {
 #links {
     color:rgb(80, 132, 196);
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container > img {
+    margin-left: 0;
+    margin-right: 60px;
+    margin-bottom: 20px;
+}
