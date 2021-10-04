@@ -1,14 +1,104 @@
+html {
+    background-color: #f8f2e9;
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    flex-grow: 1;
+}
+
 h1 {
-    color:rgb(151, 179, 214);
+    color: rgb(148, 165, 131);
+    font-size: 2.5em;
+    letter-spacing: .35em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
+
+    padding-top: 15px;
+    padding-bottom: 0;
+    margin: 0;
 }
 
 h4 {
-    color: rgb(151, 179, 214);
+    color: rgb(148, 165, 131);
+    font-size: 1.5em;
+    letter-spacing: .2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
 }
 
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    background-color: rgb(148, 165, 131);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 50px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
+  }
+  
+  .sidenav a:hover {
+    transform: scale(1.1);
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #icon {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+  
+  .main{
+    transition: margin-left .5s;
+    padding: 20px;
+    margin-top: 40px;
+    color: rgb(148, 165, 131);;
+  }
+
 body {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    color: rgb(111, 124, 99);
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
 }
 
 #image {
@@ -17,7 +107,11 @@ body {
 }
 
 #links {
-    color:rgb(80, 132, 196);
+    color: rgb(111, 124, 99);
+    font-size: 1.0em;
+    letter-spacing: .15em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
 }
 
 .flex-container {
