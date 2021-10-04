@@ -19,7 +19,7 @@ html {
 }
 
 h1 {
-    color: #9da59f;
+    color: #7d8880;
     font-size: 2.5em;
     letter-spacing: .35em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -31,7 +31,7 @@ h1 {
 }
 
 h4 {
-    color: #9da59f;
+    color: #7d8880;
     font-size: 1.5em;
     letter-spacing: .2em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -46,7 +46,7 @@ h4 {
     top: 0;
     left: 0;
     opacity: 0.9;
-    background-color:#9da59f;
+    background-color:#7d8880;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 50px;
@@ -87,12 +87,13 @@ h4 {
     transition: margin-left .5s;
     padding: 20px;
     margin-top: 40px;
-    color: #9da59f
+    color: #7d8880;
   }
 
 body {
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 30px;
     
     color: #9da59f;
     font-size: 1.25em;
