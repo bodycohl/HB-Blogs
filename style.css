@@ -19,7 +19,7 @@ html {
 }
 
 h1 {
-    color: rgb(148, 165, 131);
+    color: #9da59f;
     font-size: 2.5em;
     letter-spacing: .35em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -31,7 +31,7 @@ h1 {
 }
 
 h4 {
-    color: rgb(148, 165, 131);
+    color: #9da59f;
     font-size: 1.5em;
     letter-spacing: .2em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -46,22 +46,22 @@ h4 {
     top: 0;
     left: 0;
     opacity: 0.9;
-    background-color: rgb(148, 165, 131);
+    background-color:#9da59f;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 50px;
-  }
+}
   
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: lighter;
-  }
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: lighter;
+}
   
   .sidenav a:hover {
     transform: scale(1.1);
@@ -87,7 +87,7 @@ h4 {
     transition: margin-left .5s;
     padding: 20px;
     margin-top: 40px;
-    color: rgb(148, 165, 131);;
+    color: #9da59f
   }
 
 body {
@@ -102,12 +102,12 @@ body {
 }
 
 #image {
-    border: solid rgb(151, 179, 214);
+    border: solid #9da59f;
     padding: 3px;
 }
 
 #links {
-    color: rgb(111, 124, 99);
+    color: #9da59f;
     font-size: 1.0em;
     letter-spacing: .15em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
