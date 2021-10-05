@@ -29,15 +29,11 @@
 
         <p>After reading Chapter 3 and 4 this weekend, I was still a little confused on why the box model was so prominent in CSS coding and style. I decided to use this as the focal topic of my blog post this week to give myself a better understanding of how to use it. The 'Box Model' refers to the idea that everything is CSS as a box around it, allowing you to create layouts and ensure alignment between elements. There are two types boxes: block boxes and inline boxes. Before reading this article, I was unsure what the differences were but I have learned that it impacts the way the box interacts with other boxes on the page as well as how the page layout is constructed. This is obviously an important component when it comes to creating an aesthically pleasing website since we can not have elements overlapping or with tons of extra space surronding them. One major difference is that block boxes will break to a new line and inline boxes will not. Both of these features can be useful for different circumstances. Another point that helped me understand this concept further was that each HTML tag has a default box type. Some examples are &lth1&gt and &ltp&gt which are block box type and &lta&gt, &ltspan&gt, and &ltem&gt which are inline type. This idea that every element has a default type can help in understanding why each interact with other tags/elements like they do. Although each has a default type, there is a command in CSS to change the default type so that the element reacts in a different way. </p>
 
-<pre>
-element1 {
-    display: inline;
-    color: red;
-    font-size: 10px;
-}
-</pre>
+        <center><img src = "display.png" alt = "Inline, Block and Inline-block" width = "800"></center>
+
         <p>The 'display' field can be used to change a default box type to whatever one fits your needs. There is actaully a third common option for a display type which is inline-block. Inline-block allows the element to have the qualities of an inline element but also allows height and width properties to be applied to it. I know this can be confusing to think about but looking at the following three examples showing the difference display proporty options on the same text might make it clearer.</p>
-        <br>    
+        
+        <h4>Display: Inline</h4>
 <pre>
 &lthtml&gt
     &lthead&gt
@@ -61,9 +57,8 @@ element1 {
 &lt/html&gt
         
 </pre>
-
-            <img id = "image" src = "inlineex.png" alt = "Inline Text Example" width = 400>
-            <br>
+            <img id = "image" src = "inlineex.png" alt = "Inline Example" width = "500">
+            <h4>Display: Block</h4>
 <pre>
 &lthtml&gt
     &lthead&gt
@@ -87,9 +82,8 @@ element1 {
 &lt/html&gt
         
 </pre>  
-
-            <img id = "image" src = "blockex.png" alt = "Block Text Example" width = 400>
-            <br>  
+            <img id = "image" src = "blockex.png" alt = "Block Example" width = "500">
+            <h4>Display: Inline-block</h4>
 <pre>
     &lthtml&gt
         &lthead&gt
@@ -111,12 +105,13 @@ element1 {
     
         &lt/body&gt
     &lt/html&gt
-            
-    </pre>  
-    
-                <img id = "image" src = "inlineblockex.png" alt = "Inline-Block Text Example" width = 400>
-                <br>        
-        <p>As you can see, there is a slight difference in the amount of space between the top of the 'box' and the actual text which is determined by the display type. Those are the three most common display property options but there are actually many more. In the Reference section at the bottom, you can look at the link labeled 'Example Display Problems' to see all the other property options available in CSS.</p>
+
+</pre>  
+        <img id = "image" src = "inlineblockex.png" alt = "Inline-Block Example" width = "500">
+
+        <br>
+        
+        <p>As you can see from the examples above, there is a slight different in each of the displays recognizable by the amount of space surrounding the text. It is important to test out each display to see which works best with the content being displayed for the best option.</p>
 
         <h4>References</h4>
 

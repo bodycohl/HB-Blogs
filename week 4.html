@@ -35,98 +35,96 @@
     position: static | fixed | relative | absolute | sticky;
 }
 </pre>
+
+            <center><img src = "position property.png" alt = "Position Property options" width = "1000" height = "400"></center>
             <br>
 
             <h4>Position: Static</h4>
             <p>An element is positioned to static by default so there is no need to specify if unless you want to add 'bottom', 'top', 'left' and 'right' attributes to the element. An element with a static position will flow the normal flow of the page. 
 <pre>
-example.static {
+div.static {
     position: static;
-    border: 3px solid rgb(151, 179, 214);
+    border: 2px dotted #9da59f;
 }
 
 &ltbody&gt
+    &lth2&gtposition: static&lt/h2&gt
 
     &ltdiv class = "static"&gt
     This div element has position: static;
     &lt/div&gt
 &lt/body&gt
 </pre>
-
-            <img id = "image" src = "static.png" alt = "Static Example" width = "400">
-            </p>
-
-            <h4>Position: Fixed</h4>
-            <p> An element with a fixed postion is anchored to the viewport and doesn't move when scrolling throught a page. It is important to use the 'top', 'bottom', 'left', and 'right' properties to position the element in the correct spot on the viewport. Another important thing to consider with a fixed position element is that the element won't take up space in the flow. It almost resides on top of everything else which can be good for things such as navigation bars. 
-<pre>
-example.fixed {
-    position: fixed;
-    border: 3px solid rgb(151, 179, 214);
-}
-                
-&ltbody&gt
-                
-    &ltdiv class = "fixed"&gt
-        This div element has position: fixed;
-    &lt/div&gt
-&lt/body&gt
-</pre>
-                
-            <img id = "image" src = "fixed.png" alt = "Fixed Example" width = "400">
-            </p>
-
             <h4>Position: Relative</h4>
             <p> An element with relative positioning is offset compared to where it would be placed in normal flow. That is, the only way to change the positioning when its relative is by setting the 'bottom', 'top', 'left', and 'right' attributes. Other content's positioning will not be impacted so this positioning option can cause excessive white space if not used in the correct way.
 <pre>
-example.relative {
+div.relative {
     position: relative;
-    border: 3px solid rgb(151, 179, 214);
+    border: 2px dotted #9da59f;
 }
                 
-&ltbody&gt
-                
+&ltbody&gt 
+    &lth2&gtposition: relative&lt/h2&gt  
+
     &ltdiv class = "relative"&gt
         This div element has position: relative;
     &lt/div&gt
 &lt/body&gt
 </pre>
-            <img id = "image" src = "relative.png" alt = "Relative Example" width = "400px">
             </p>
 
             <h4>Position: Absolute</h4>
             <p> Absolute positioning suggests that an element is positioned relative to the nearest positioned ancestor. These elements are not a part of the normal flow of the page and can overlap with elements that are apart of the normal page flow. If there are no positioned ancestors for the element to latch onto, the element might move along page with the normal flow.
 <pre>
-example.absolute {
+div.absolute {
     position: absolute;
-    border: 3px solid rgb(151, 179, 214);
+    border: 2px dotted #9da59f;
 }
                                 
-&ltbody&gt
-                                
+&ltbody&gt  
+    &lth2&gtposition: absolute&lt/h2&gt    
+
     &ltdiv class = "absolute"&gt
         This div element has position: absolute;
     &lt/div&gt
 &lt/body&gt
 </pre>
-            <img id = "image" src = "absolute.png" alt = "Absolute Example" width = "400px">
-            </p>
+        </p>
+
+        <h4>Position: Fixed</h4>
+        <p> An element with a fixed postion is anchored to the viewport and doesn't move when scrolling throught a page. It is important to use the 'top', 'bottom', 'left', and 'right' properties to position the element in the correct spot on the viewport. Another important thing to consider with a fixed position element is that the element won't take up space in the flow. It almost resides on top of everything else which can be good for things such as navigation bars. 
+<pre>
+div.fixed {
+position: fixed;
+border: 2px dotted #9da59f;
+}
+            
+&ltbody&gt   
+&lth2&gtposition: fixed&lt/h2&gt
+
+&ltdiv class = "fixed"&gt
+    This div element has position: fixed;
+&lt/div&gt
+&lt/body&gt
+</pre>
+        </p>
 
             <h4>Position: Sticky</h4>
             <p> Sticky positioning means that an element is positioned in relation to the user's scrolling position. This typically means that it toggles between fixed and relative based on the scroll positioning. The element basically sticks in place while you move through the page. Sticky and fixed have the relatively same concept as they maintain the positioning of the element while other elements move with the scrolling of the page.
 <pre>
-example.sticky {
+div.sticky {
     position: sticky;
-    border: 3px solid rgb(151, 179, 214);
+    border: 2px dotted #9da59f;
 }
                                                 
-&ltbody&gt
-                                                
+&ltbody&gt   
+    &lth2&gtposition: sticky&lt/h2&gt
+
     &ltdiv class = "sticky"&gt
         This div element has position: sticky;
     &lt/div&gt
 &lt/body&gt
 </pre>
-            <img id = "image" src = "sticky.png" alt = "Sticky Example" width = "400px">
             </p>
 
         <h4>References</h4>
