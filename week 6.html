@@ -27,5 +27,64 @@
                 <span id = "icon" onclick = "openNav()">&#9776; Menu</span>
             </div>
         </div>
+
+        <p>JavaScript is arguably the hardest language, associated with HTML, to learn. It is important to understand what JavaScript is before starting to write code as it can be confusing otherwise. JavaScript is a scripting language that also webpages to become interactive and responsive. Obviously, the websites we see in everyday life are very complex and use tons of JavaScript. This is the third layer of standard web development langauges that makes up the World Wide Web. HTML, CSS, and JavaScipt work together to create aesthetic, interative webpage elements. Below I have included an example from MDN Web Docs to show how the three work together: </p>
+
+<pre>
+HTML
+&lth2&gtPlayer 1: Chris&lt/h2&gt
+</pre>
+
+<pre>
+CSS
+
+p {
+    font-family: 'helvetica neue', helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid rgba(0,0,200,0.6);
+    background: rgba(0,0,200,0.3);
+    color: rgba(0,0,200,0.6);
+    box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+    border-radius: 10px;
+    padding: 3px 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+</pre>
+
+<pre>
+JAVASCRIPT
+
+const para = document.querySelector('p');
+
+para.addEventListener('click', updateName);
+    
+function updateName() {
+    let name = prompt('Enter a new name');
+    para.textContent = 'Player 1: ' + name;
+}
+</pre>
+
+        <img src = "before.png" alt = "Before clicking" width = "200" height = "50">
+        <br>
+        <img src = "after.png" alt = "After clicking" width = "200" height = "50">
+
+        <p>
+            It can be hard to see in snapshots but the button starts off by saying Player 1: Chris as shown in the HTML code. The CSS formats it to have a purple background with a darker purple border, a given font, etc. Finally the JavaScript gives the button animation by allowing it to be pressed through a mouse click. When clicked, the button changes from Player 1: Chris to Player 1: Null. Since there is no input, the new name becomes 'NULL'. As you can see, the three working together allows for a webpage to become much more dynamic.
+            <br>
+            <br>
+            In order to add some animation to your page, you will need to either include an internal &ltscript&gt tag with the functions similar to an internal css link tag or you can create an external script file (again, similar to embedding css) and include a linking script tag like this:
+            <br>
+            <br>
+            &ltscript&gt src = "javascript.js" &lt/script&gt
+            <br>
+            <br>
+            Either way works but it typically better to keep the code in a separate file so it can be used multiple times from a single source. JavaScript can occasionally live inside HTML files as well to animate things such as buttons but this a bad practice.
+        </p>
+
+        <h4>Reference</h4>
+        <a id = "links" href = "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">MDN Web Docs</a>
     </body>
 </html>
