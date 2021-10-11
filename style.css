@@ -129,3 +129,11 @@ body {
     margin-right: 60px;
     margin-bottom: 20px;
 }
+
+.week-7-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

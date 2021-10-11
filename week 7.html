@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Hailey's Blog Posts - Week 6</title>
+        <title>Hailey's Blog Posts - Week 7</title>
         <link rel="stylesheet" href="style.css">
         <script src = "sidebar.js"></script>
     </head>
@@ -29,4 +29,68 @@
             </div>
         </div>
 
-        <p>Last week, we dicussed the purpose of using JavaScript in conjuction with HTML and CSS code to create more interactive, responsive websites. Well this is the main goal of JavaScript, there are several ways to achieve this. This week, we learned about Node.js and how it can used to write asynchronous code. </p>
+        <p>Last week, we dicussed the purpose of using JavaScript in conjuction with HTML and CSS code to create more interactive, responsive websites. Well this is still the main goal of JavaScript, there are several ways to achieve this. This week, we are learning about Node.js and how it can used to write asynchronous code to achieve our goal. Everything we have worked on so far has only required one JavaScript file that can easily be linked to the HTML and CSS files through a &ltscript&gt tag. However, in reality, we know that projects require many JS files in order for everything to run simultaneously in a webpage. In this post, I am going to highlight the purpose of Node.js and asynchronous scripting as well as a brief overview of how to manage multiple JS files in larger projects.
+
+        <h4>Node.js</h4>
+
+        Node.js is a software that can be installed on your computer and used through the command line to write asynchronous, event-driven JavaScript code. Asynchronous code is optimal in event-driven programming since it waits to execute until it has all the information needed from other calls. This way, your process is free to execute other code while it waits rather than clogging up the process with a call that has to wait for information before running. To use this methodology, Node.js has implemented 'callbacks' and 'promises' that help execute asynchronously. A callback is a function that is called at the end of a given task to prevent blocking of other code from being executed in the meantime. Callbacks are used frequently with error messaages and follow a standard format as shown below:
+
+<pre>
+function asyncOperation ( a, b, c, callback ) {
+    // ... lots of hard work ...
+    if ( /* an error occurs */ ) 
+    {
+        return callback(new Error("An error has occurred"));
+    }
+    // ... more work ...
+    callback(null, d, e, f);
+}
+    
+asyncOperation ( params.., function ( err, returnValues.. ) 
+{
+    // This code gets run after the async operation gets run
+});
+</pre>
+        <br>
+        Callbacks are great for very simply programs but can become messy and cause issues when people try to write their code visually from top to bottom. The ordering of callbacks can jump around the page making it hard to follow when code becomes complex. Another way to deal with asynchronous code that avoids this issue of "callback hell" is known as promises. As definied on Node.js, a promise is "a proxy for a value that will eventually become available". Promises have a similar purpose to callbacks in the sense that they are called and then in a pending state until resolved but while in that pending state, the process is free to continue executing. Below is a sample of code that shows how a promise can be used by checking a global variable and continuing based on that vairable's state:
+
+<pre>
+let done = true
+
+const isItDoneYet = new Promise((resolve, reject) => {
+    if (done) {
+        const workDone = 'Here is the thing I built'
+        resolve(workDone)
+    } 
+    
+    else {
+        const why = 'Still working on something else'
+        reject(why)
+    }
+})
+</pre>
+
+        As you can see, the variable 'isItDoneYet' creates a new promise to will call resolve or reject based on its boolean value. It can wait as long as needed before executing the correct portion of the if-else statement. Once again, this is just another helpful way to keep a program running and avoid clogging the process while waiting for imformation that is coming later on.
+
+        <h4>Dependency Management</h4>
+        As well CSS, we want to make sure we are writing our code modularly to avoid repetition and allow repurposing. This can also help to minimize the amount of bugs within our code. Node.js makes it very easy to do so. When there are multiple .js files that have repeating code, it is possible to use module.exports.<i>var_name</i> to expose the variable and allow it to be used in other .js files. When using this keyword, we will want to use the <i>require</i> keyword in the JS files that wish to use the exposed variables. The <i>require</i> keyword should be stored in a variable in order to use it throughout the requesting JS file. By using these two keywords together, we create modularity between multiple files. Below I have included examples to explain the concepts I dicussed in the paragrapah more clearly.
+        <br>
+        <br>
+        <center><div id = "week-7-container">
+            <img src = "appMsg.png" alt = "appMsg.js screenshot" width = "550" height = "250">
+            <img src = "autofill.png" alt = "apps.js showing autofill with require keyword"width = "550" height = "250">
+            <img src = "apps.png" alt = "apps.js completed" width = "550" height = "250">
+            <img src = "terminal-output.png" alt = "terminal output" width = "700">
+        </div></center>
+        </p>
+
+        <h4>References</h4>
+        <a id = "links" href = "https://nodejs.org/en/knowledge/getting-started/control-flow/how-to-write-asynchronous-code/">Node.js: Asynchronous Code</a>
+        <br>
+        <a id = "links" href = "https://nodejs.org/en/knowledge/getting-started/control-flow/what-are-callbacks/">Node.js: Callbacks</a>
+        <br>
+        <a id = "links" href = "http://callbackhell.com">Callback Hell</a>
+        <br>
+        <a id = "links" href = "https://nodejs.dev/learn/understanding-javascript-promises">Node.js: Promises</a>
+        <br>
+        <a id = "links" href = "https://dzone.com/articles/nodejs-dependency-management#:~:text=%20Node.js%20–%20Dependency%20Management%20%201%20Introduction.,Nodejs%20looks%20for%20dependencies.%20%20...%20More%20">Dependency Management</a>
