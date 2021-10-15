@@ -137,3 +137,14 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+#request-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  flex-grow: 1;
+}

@@ -29,3 +29,80 @@
                 <span id = "icon" onclick = "openNav()">&#9776; Menu</span>
             </div>
         </div>
+
+        <p>
+            As I have said before, JavaScript can be extremely challenging to learn and seems very complex if you don't understand the basic concepts. Another important idea that I am going to cover in the post is the concept of endpoints and the types of requests they can call to manipulate data. The use of endpoints is essential to creating client / server interaction. This is a topic that I am still struggling to understand so looking at other examples in addition to the assigned class reading was very beneifical for me and I am hopefully that after reading this post, you will feel a little more confident about the topic too.
+
+            <h4>HTTP Requests</h4>
+                An HTTP Request is essentially an action that will be performed by a given request-URL. The request is an intermediate stage betweeen the client and the server. The client submits a request to the server. After breaking down the request, the server responds with the status information about the request. There are several different types of requests and I outline the 4 most common later in this paragraph. Each request has a specific purpose for manipulating data.
+                <br>
+                <br>
+                The four main ways to work with data is to create it, read it, update it or delete it. This introduced the acronym C.R.U.D and although the HTTP Requests relating to these methods have different names, it outlines the concept well. The HTTP Requests are: GET, POST, PATCH, and DELETE.
+                <br>
+                <div id = "request-container">
+                    <p>
+                        <b>GET Request</b>
+                        <br>
+                        A GET Request is issued to retrieve information from a resource on the server. This HTTP request is the agruably the most popular type of request and will retreive whatever is specified in the request-URL.
+                        <br>
+                        <br>
+                        <b>POST Request</b>
+                        <br>
+                        A POST Request is used to send data to the server to create a new resource or add to an existing one. The information accompanying the request is archived in the body of the HTTP request. This is also a common request and is used alot to update profiles on social media such as a new bio or profile picture.
+                        <br>
+                        <br>
+                        <b>PATCH Request</b>
+                        <br>
+                        A PATCH Request is similar to POST but its primary purpose is to apply partial modifications rather than a completely different resource.
+                        <br>
+                        <br>
+                        <b>DELETE Request</b> 
+                        <br>
+                        A DELETE Request is extremely self-explanitory. It issues a request to delete whatever is contained in the request-URL. The targeted resoruce will be removed once the request has been sent.
+                    </p>
+
+                    <img src = "images/crud.png" alt = "CRUD" width = "600">
+                </div>
+
+                <h4>Endpoints</h4>
+                Now that you hopefully understand HTTP Requests, we can discuss endpoints that use the different requests to perform given tasks. An endpoint is a specific address that contains the HTTP request as well as the set of data that will be manipulated. This is how everything is accessed and works together to perform the back-end work of your web service. Below I have provided some sample code of a simple program with two GET requests. The first request will return everythiung in the exampleAll array and the second will return information about specified component which in 'one' in this example. The last chunck of code ensures that the service is live before requests start to be called.
+<pre>
+
+const express = require('express');
+
+const exampleAll = {};
+const service = express();
+
+// Endpoint methods - GET Requests
+
+service.get('/example', (request, response) => {
+    response.json({
+      ok: true,
+      results: exampleAll,
+    });
+  });
+
+  service.get('/example/:one', (request, response) => {
+    response.json({
+      ok: true,
+      results: exampleAll,
+    });
+  });
+
+const port = 5000;
+service.listen(port, () => {
+    console.log(`We're live on port ${port}!`);
+});
+</pre>
+        </p>
+
+        <h4>References</h4>
+        <a id = "links" href = "https://rapidapi.com/blog/api-glossary/http-request-methods/">HTTP Requests</a>
+        <br>
+        <a id = "links" href = "https://rapidapi.com/blog/how-to-use-an-api-with-javascript/">CRUD and Endpoints</a>
+        <br>
+        <a id = "links" href = "https://docs.maticmedia.co.uk/api/crud-endpoints.html#manual-crud-endpoints">Sample Code Inspiration</a>
+        
+
+    </body>
+</html>
