@@ -124,6 +124,12 @@ body {
     align-items: center;
 }
 
+#final-img {
+  padding-left: 40px;
+  width: 700px;
+  height: 500px;
+}
+
 .flex-container > img {
     margin-left: 0;
     margin-right: 60px;
